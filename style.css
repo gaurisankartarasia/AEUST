@@ -1,0 +1,529 @@
+
+header {
+  color:#d1d0cd;
+  background-color: #333333; /* Cartoonish background color */
+  text-align: center;
+  padding: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
+}
+h2 {
+      text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Web-safe font */
+      font-size: 60px; /* Adjust the font size as needed */
+    }
+    h2 {
+      text-align: center;
+      font-family: 'Comic Sans MS', cursive, sans-serif; /* Web-safe font */
+      font-size: 30px; /* Adjust the font size as needed */
+    }
+
+    p, nav, blockquote, li, body, a, h3 {
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Web-safe sans-serif font */
+      font-size: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Web-safe sans-serif font */
+      font-size: 35px;
+    }
+
+body {
+  background-color: #CCCCCC; /* Cartoonish background color */
+  margin: 0;
+  padding:0;
+}
+
+
+
+.custom-pointer {
+  position: fixed;
+  width: 10px;
+  height: 10px;
+  background-color: #df900f; /* Customize the color as needed */
+  border-radius: 100%;
+  pointer-events:visible; /* Ensure the custom pointer doesn't interfere with other elements */
+  transition: transform 0.1s ease-out; /* Add a smooth transition effect */
+}
+
+
+
+nav1 {
+  text-align: center;
+}
+
+nav1 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav1 li {
+  display: inline-flex;
+  margin: 0 10;
+}
+nav2 {
+  text-align: center;
+}
+
+nav2 ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav2 li {
+  display: inline-flex;
+  margin: 0 10;
+}
+nav1 a {
+  text-align: center;
+  display: inline-block;
+  padding-right: 62px;
+  padding-left:  62px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  margin: 0px;
+  text-decoration: none;
+  background-color: #05a1fc;
+  color: #fff;
+  border-radius: 0px;
+}
+
+nav2 a {
+  text-align: center;
+  display: inline-block;
+  padding-left:  24px;
+  padding-right: 24px;
+  padding-bottom: 7px;
+  padding-top: 7px;
+  margin: 0px;
+  text-decoration: none;
+  background-color: #05a1fc;
+  color: #fff;
+  border-radius: 0px;
+}
+
+nav1 a:hover {
+  background-color: #edf508; /* Darker color on hover for a jelly-like effect */
+  color: #2a0404; /* Text color on hover */
+}
+nav2 a:hover {
+  background-color: #f7ef08; /* Darker color on hover for a jelly-like effect */
+  color: #4d1010; /* Text color on hover */
+}
+
+
+
+
+/********** Gallery CSS Starts **********/  
+.main-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.modal-dialog {
+  max-width: 90%;
+  margin: 1.75rem auto;
+}
+
+.modal-content {
+  background-color: transparent;
+  border: none;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+}
+/********** Gallery CSS Ends **********/
+/********** Placement CSS Starts **********/  
+
+
+/********** Placement CSS Ends **********/
+
+
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+}
+
+.photos {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.large-photo img {
+  width: 600px;
+  height: auto;
+}
+
+.small-photo img {
+  position: absolute;
+  top: 145%;
+  left: 20%;
+  width: 350px;
+  height: auto;
+}
+
+.about {
+  flex: 1;
+  padding: 20px;
+}
+
+.about p1 {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.5;
+}
+.about p2 {
+  font-size: 15px;
+  line-height: 1.5;
+}
+.about h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.container-fluid-custom {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.row-custom {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 15px;
+}
+
+.col-md-4-custom {
+  flex: 0 0 calc(33.333% - 90px);
+  margin: 2px;
+
+}
+
+.service-box-custom {
+  color:#e8f0ec;
+  text-align: center;
+  margin: 0;
+  line-height: 50px;
+  left:-4cm;
+  top:2cm;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border-radius: 20px;
+}
+
+.service-box-custom:hover 
+.front-content {
+  transform: translateY(-100%);
+}
+
+.front-content {
+  color:#ffffff;
+  background-color:#677192;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transition: transform 0.3s ease-in-out;
+}
+
+.service-box-custom:hover 
+.service-content {
+  opacity: 1;
+}
+
+.service-content {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.service-box-custom:hover {
+  box-shadow: 0 0 10px rgba(11, 11, 11, 0.2);
+  transform: scale(1.05);
+}
+
+.service-box-custom:hover {
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .col-md-4-custom {
+     flex: 0 0 calc(50% - 30px);
+
+  }
+}
+
+/* Additional CSS to adjust position */
+.logo-container {
+  /* Positioning */
+  position: absolute;
+  top: 1.3cm;
+  left: 7cm;
+
+  /* Size */
+  width: 188px;
+  height: auto;
+  overflow: hidden;
+
+}
+
+.logo-container img {
+  /* Ensure the image takes up 100% of the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+
+
+.logo-img { /*login page logo*/
+  position:absolute;
+  top: 0.3cm;
+  left:18.7cm;
+  width: 130px; /* Adjust the width as needed */
+  height: auto;
+  /* Add any other styles you want for the image */
+}
+.logo-img img {
+  /* Ensure the image takes up 100% of the container */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintain aspect ratio and cover the container */
+}
+
+.view-all-btn {
+  margin-top:10px;
+  padding: 10px 20px; 
+  font-size: 16px;
+  background-color: #23cc23;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Adjust the margin-top value as needed */
+}
+
+.floating-text {
+  background-color: #0ee0eb6d; /* Jelly-like background color */
+  padding: 5px;
+  position: fixed;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
+  margin: 20px;
+  text-align: center;
+  font-size: 24px;
+  right: 20px; /* Adjust the right property to move it to the desired distance from the right edge */
+}
+
+.floating-logo1,
+.floating-logo2,
+.floating-logo3 {
+  display: inline-block;
+  margin: 10px;
+  transform: rotate(0deg); /* Add a slight rotation for a cartoonish effect */
+  position: buttom;
+  bottom: 20px; /* Adjust the bottom property to move it to the desired distance from the bottom edge */
+}
+
+.floating-logo1 img,
+.floating-logo2 img,
+.floating-logo3 img {
+  width: 70px;
+  height: auto;
+  border-radius: 50%; /* Make the logos circular */
+  border: 5px solid #d1d0cd; /* Match the background color for a reflective border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+ /* Add a subtle shadow for a 3D effect */
+
+
+
+.logo-buttons {
+  display: flex;
+  justify-content: space-around;        
+
+}
+
+.logo-button {
+  background-color: #FFD7; /* Jelly-like background color */
+  padding-top: 20px;    /* Adjust the top padding */
+  padding-right: 120px;  /* Adjust the right padding */
+  padding-bottom: 20px; /* Adjust the bottom padding */
+  padding-left: 100px;   /* Adjust the left padding */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
+  text-align: center;
+}
+
+.logo-button img {
+  width: 150px;
+  height: auto;
+  border-radius: 50%; /* Make the images circular */
+}
+
+ /* Custom CSS for horizontal layout */
+ .quick-links {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Custom CSS for individual quick links */
+.quick-link {
+  width: 23%; /* Adjust as needed */
+  padding: 20px;
+  text-align: center;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Add animation on hover */
+.quick-link:hover {
+  transform: scale(1.1);
+}
+
+/* Custom CSS for images */
+.quick-link img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+footer
+{
+  background-color: #bebebb; /* Cartoonish background color */
+  text-align: center;
+  padding: 10px;
+  position: buttom;
+  bottom: 0;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
+}
+
+
+.notice-board {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  width: 30%;
+  height: 400px;
+  margin: 50px 0; /* Adjusted top and bottom margin */
+  padding: 50px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+  background-color: #ebf0f4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  
+  position: absolute;
+  top: 195%; /* Adjusted to center vertically */
+  right: 5%; /* Adjusted to move to the right side */
+  transform: translateY(-50%); /* Adjusted to center vertically */
+}
+
+.notice-board h1 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #d61b1b;
+  font-weight: bold;
+}
+
+.notice-board ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.notice-board li {
+  margin-bottom: 15px; /* Added spacing between messages */
+}
+
+.notice-board li h2 {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.notice-board li p {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 16px;
+}
+
+.notice-board a {
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: rgb(0, 42, 255);
+  text-decoration: none;
+  font-weight: bold;
+  display: block; /* Ensure each link is a block-level element */
+}
+
+.notice-board li {
+  padding-top: 5px;
+}
+.know-more {
+  padding: 7px 15px; 
+  font-size: 16px;
+  background-color: #2337cc;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Adjust the margin-top value as needed */
+}
+
+.college-events {
+  display: flex;
+overflow-x:auto;    
+
+}
+
+.college-event{
+  flex: 0 0 auto;
+  margin-right:10px;
+  background-color: rgba(59, 189, 199, 0.467); /* Jelly-like background color */
+  padding-top: 20px;    /* Adjust the top padding */
+  padding-right: 120px;  /* Adjust the right padding */
+  padding-left: 100px;   /* Adjust the left padding */
+  padding-bottom:5px;
+  width:120px;
+  height:300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
+  text-align: center;
+}
+
+.college-event img {
+  margin-left:-1.5cm;
+  width: 150px;
+  height: auto;
+}
