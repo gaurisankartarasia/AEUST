@@ -34,8 +34,10 @@ body {
   margin: 0;
   padding:0;
 }
+/*************Aspect Ratio Starts*************/
 
 
+/*************Aspect Ratio Ends*************/
 
 .custom-pointer {
   position: fixed;
@@ -122,36 +124,71 @@ nav2 a:hover {
 
 
 /********** Gallery CSS Starts **********/  
-.main-section {
-  text-align: center;
-  padding: 20px;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
 }
 
-.gallery img {
-  width: 100%;
-  max-width: 200px;
-  height: auto;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  margin: 10px;
   cursor: pointer;
   transition: transform 0.3s ease-in-out;
 }
 
-.gallery img:hover {
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.gallery-item:hover {
   transform: scale(1.1);
 }
 
-.modal-dialog {
-  max-width: 90%;
-  margin: 1.75rem auto;
+@media screen and (max-width: 768px) {
+  .gallery-item {
+      flex-basis: 100%;
+  }
 }
 
-.modal-content {
-  background-color: transparent;
-  border: none;
-}
-
-.modal-body img {
+/* Enlarged Image Styles */
+.enlarged-image {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.enlarged-image img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 20px;
 }
 /********** Gallery CSS Ends **********/
 /********** Placement CSS Starts **********/  
@@ -349,7 +386,7 @@ nav2 a:hover {
   display: inline-block;
   margin: 10px;
   transform: rotate(0deg); /* Add a slight rotation for a cartoonish effect */
-  position: buttom;
+  position: bottom;
   bottom: 20px; /* Adjust the bottom property to move it to the desired distance from the bottom edge */
 }
 
@@ -425,7 +462,7 @@ footer
   background-color: #bebebb; /* Cartoonish background color */
   text-align: center;
   padding: 10px;
-  position: buttom;
+  position: bottom;
   bottom: 0;
   width: 100%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
@@ -527,3 +564,111 @@ overflow-x:auto;
   width: 150px;
   height: auto;
 }
+
+/*****Why Choose GEC Section*********/
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.why-choose-us,
+.testimonials {
+  flex: 1;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial {
+  margin-top: 20px;
+}
+
+blockquote {
+  font-style: italic;
+  color: #555;
+}
+
+/********Pop-Up Message******/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  z-index: 1000;
+  transition: top 0.5s, left 0.5s;
+}
+
+.popup-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/******Message*****/
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.new-popup {
+  display: none;
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  background-color: rgba(21, 21, 20, 0.8);
+  color: #fff;
+  padding: 5px;
+  border-radius: 20px;
+  text-align: center;
+  z-index: 1000;
+  transition: top 0.5s, left 0.5s;
+}
+
+.new-popup-content {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.new-close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size:30px;
+  cursor: pointer;
+}
+/******Feedback Button*******/
+/* Add this style for the feedback button */
+.feedback-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
