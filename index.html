@@ -8,10 +8,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <title>Gandhi Engineering College</title>
  
-  
   <body>
-  
     <div class="custom-pointer" id="custom-pointer"></div>
+  
   
     <script src="pointer.js"></script>
 
@@ -28,12 +27,59 @@
     <button class="feedback-button" onclick="redirectFeedback()">Give Feedback</button>
   
     <!----------------CONTACT US-->
-    
-    <div class="floating-text">
-      <p>Contact us 
-        9876543210
-      </p>
+    <div class="floating-button1">
+      <img src="https://i.postimg.cc/KjKRqYr5/75022-phone-call-unscreen.gif" alt="Floating GIF Button">
     </div>
+  
+    <body>
+      <div class="floating-button2">
+        <img src="https://i.postimg.cc/XqCwvsM0/5de7d2474cdb984b60db1a1c-valentine-email.gif" alt="Floating GIF Button">
+      </div>
+      <div class="Follow-Button">
+    <button-follow id="FollowButton">
+      <img src="https://media.giphy.com/media/sAxAw532sWxxtqndN6/giphy.gif" alt="Follow Button">
+    </button-follow>
+    <div class="follow-popup" id="followpopup">
+      <div class="follow-popup-content">
+        <button-close class="follow-close-btn" onclick="followclosePopup()">Close</button-close>
+        <h4>Follow Us</h4>
+        <div class="follow-popup-content">
+          <a href="linkedin-link" class="social-button">
+            <img src="https://i.postimg.cc/Z55LT8c7/Linked-In-logo-animation.gif" alt="LinkedIn">
+          </a>
+          <a href="instagram-link" class="social-button">
+            <img src="https://i.postimg.cc/zBzzMf5g/tenor.gif" alt="Instagram">
+          </a>
+          <a href="twitter-link" class="social-button">
+            <img src="https://i.postimg.cc/PrRCw1HF/twitter.gif" alt="Twitter">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    document.getElementById('FollowButton').addEventListener('click', function () {
+      const followPopup = document.getElementById('followpopup');
+      const followButton = document.getElementById('FollowButton');
+       
+      followPopup.style.display = 'flex';
+      followButton.style.animation = 'moveUp 1s ease-in-out';
+    });
+
+    function followclosePopup() {
+      const followPopup = document.getElementById('followpopup');
+      const followButton = document.getElementById('FollowButton');
+       
+      const popupContent = document.querySelector('.follow-popup-content');
+      popupContent.classList.add('follow-popup-closing');
+      setTimeout(() => {
+        followPopup.style.display = 'none';
+        popupContent.classList.remove('follow-popup-closing');
+      }, 300);
+      followButton.style.animation = 'none';
+    }
+  </script>
+    
     <!-----------ANNOY-->
     <style>
       /* Styles for the popup */
@@ -88,7 +134,7 @@
       <div class="popup-content">
         <span class="close-btn" onclick="closePopup()">&times;</span>
         <h2>Welcome!</h2>
-        <p>*Note:This website is initial building stage. Give Feedback by pressing the Feedback button.</p>
+        <p>This website is initial building stage. Give Feedback by pressing the Feedback button.</p>
       </div>
     </div>
 
@@ -140,47 +186,155 @@
     <h3>BHUBANEWSWAR</h3>
     <h3> NAAC A+ Accredited Institute</h3>
     <p>Empowering minds, shaping the future.</p>
-    <h6>This website serves as a low-fidelity prototype, with all rights belonging to the respective organization.</h6>
   </header>
 
-  <nav1>
-
+  <nav>
     <ul>
-      <li><a href="alumni.html">Alumni</a></li>
-      <li><a href="staff.html">Staff</a></li>
-      <li><a href="examinations.html">Examinations & Academics</a></li> 
-      <li><a href="naac-ssr.html">NAAC SSR</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="nirf.html">NIRF</a></li>
-      <li><a href="login.html" style="background-color:rgb(241, 7, 7);">Login</a></li>
-     
+      <li><a href="alumni.html">Alumni</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="staff.html">Staff</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="examinations.html">Examinations & Academics</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li> 
+      <li><a href="naac-ssr.html">NAAC SSR</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="contact.html">Contact</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="nirf.html">NIRF</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="login.html" style="background-color: rgb(241, 7, 7);">Login</a>
+      </li>
+      <a href="#" class="blinking-button">
+        <img src="https://i.postimg.cc/k4b26hGw/open-stamp-png-768x512.png"  alt="Icon" style="width: 45px; height: auto;" class="button-icon ">
+         Admissions Open Now
+      </a>
     </ul>
-  </nav1>
+  </nav>
+
 
   <br>
-  <nav2>
+  <nav>
     <ul>
-      <li><a href="about.html">About</a></li>
-      <li><a href="academics.html">Academics</a></li>
-      <li><a href="programmes.html">Programmes</a></li>
-      <li><a href="examination.html">Examination</a></li>
-      <li><a href="admissions.html">Admissions</a></li>
-      <li><a href="research.html">R & D</a></li>
-      <li><a href="iqac.html">IQAC</a></li>
-      <li><a href="placement.html">Placement</a></li>
-      <li><a href="campus.html">Campus</a></li>
-      <li><a href="facilities.html">Facilities</a></li>
-      <li><a href="helpdesk.html">Help Desk</a></li>
+      <li><a href="about.html">About</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="academics.html">Academics</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="programmes.html">Programmes</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="examination.html">Examination</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="admissions.html">Admissions</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="research.html">R & D</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="iqac.html">IQAC</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="placement.html">Placement</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="campus.html">Campus</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="facilities.html">Facilities</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
+      <li><a href="helpdesk.html">Help Desk</a>
+        <ul>
+          <li><a href="#">Option 1</a></li>
+          <li><a href="#">Option 2</a></li>
+          <li><a href="#">Option 3</a></li>
+        </ul>
+      </li>
     </ul>
-  </nav2>
-  
+  </nav> 
   
 
 <br>
-<section class="logo-buttons">
+
+<!---------Admission Corner------->
+
+<section class="admission-img-btns">
 </div>
-<div class="logo-button">
-  <img src="https://i.ibb.co/pfFn2C8/1675273.png" alt="Logo 3" style="width: 190px; height: auto;">
+<div class="admission-img-btn">
+  <img src="https://i.ibb.co/pfFn2C8/1675273.png" alt="Information Brochure" style="width: 100px; height: auto;">
   <h3>Information Brochure</h3>
   <button class="view-all-btn" style="top: 5cm; left: 1cm;" onclick="redirectToAnotherPage()">View All</button>
 </div>
@@ -192,8 +346,8 @@
   }
 </script>
 </div>
-<div class="logo-button">
-  <img src="https://i.ibb.co/xh6C2K8/c201a522de71cd6842d588544f157919.png" alt="Logo 3" style="width: 190px; height: auto;">
+<div class="admission-img-btn">
+  <img src="https://i.ibb.co/xh6C2K8/c201a522de71cd6842d588544f157919.png" alt="Admissios Open" style="width: 100px; height: auto;">
   <h3>Admissions Open</h3>
   <button class="view-all-btn" style="top: 5cm; left: 1cm;" onclick="redirectToAnotherPage()">View All</button>
 </div>
@@ -204,8 +358,8 @@
       window.location.href = 'https://gec.edu.in/admission-procedure.php';
   }
 </script>
-  <div class="logo-button">
-    <img src="https://i.ibb.co/mytk0td/8363666.png" alt="Logo 3" style="width: 190px; height: auto;">
+  <div class="admission-img-btn">
+    <img src="https://i.ibb.co/mytk0td/8363666.png" alt="Admission Procedure" style="width: 100px; height: auto;">
     <h3>Admission Procedure</h3>
     <button class="view-all-btn" style="top: 5cm; left: 1cm;" onclick="redirectToAnotherPage()">View All</button>
 </div>
@@ -217,8 +371,7 @@
     }
 </script>
 
-</section>
-  
+</section>  
     <title>About GEC</title>
 
     <div class="container">
@@ -390,39 +543,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
   <!---------- Gallery Starts --------->
-  <div class="gallery">
-    <div class="gallery-item" onclick="enlargeImage(this)">
-        <img src="image1.jpg" alt="Image 1">
-    </div>
-    <div class="gallery-item" onclick="enlargeImage(this)">
-        <img src="image2.jpg" alt="Image 2">
-    </div>
-    <!-- Add more gallery items as needed -->
-</div>
-
-<script>
-    function enlargeImage(element) {
-        var imageSrc = element.querySelector('img').src;
-
-        var enlargedImage = document.createElement('div');
-        enlargedImage.classList.add('enlarged-image');
-
-        var image = document.createElement('img');
-        image.src = imageSrc;
-
-        var closeButton = document.createElement('span');
-        closeButton.innerHTML = '&times;';
-        closeButton.classList.add('close-button');
-        closeButton.onclick = function () {
-            enlargedImage.remove();
-        };
-
-        enlargedImage.appendChild(image);
-        enlargedImage.appendChild(closeButton);
-
-        document.body.appendChild(enlargedImage);
-    }
-</script>
+  
 
 <!---------- Gallery Ends --------->
 <!---------- Placement Starts --------->
