@@ -9,6 +9,126 @@
     <title>Gandhi Engineering College</title>
  
   <body>
+    <!------------------------Feedback-------------->
+        <title>Feedback Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        #feedbackButton {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            margin: 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        #feedbackButton:hover {
+            background-color: #2980b9;
+        }
+
+        #feedbackModal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        #feedbackModal h2 {
+            color: #333;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        #feedbackText {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        #sendFeedbackBtn {
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+
+        #sendFeedbackBtn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- Feedback Button -->
+<button id="feedbackButton">Give Feedback</button>
+
+<!-- Feedback Modal -->
+<div id="feedbackModal">
+    <h2>Your Feedback</h2>
+    <textarea id="feedbackText" rows="4" placeholder="Type your feedback here..." required></textarea><br>
+    <button id="sendFeedbackBtn" onclick="sendFeedback()">Send Feedback</button>
+</div>
+
+<script>
+    // Initialize Email.js with your user ID
+    emailjs.init("5EftpqrxWRNJWjt21");
+
+    // Function to show the feedback modal
+    function showFeedbackModal() {
+        document.getElementById('feedbackModal').style.display = 'block';
+    }
+
+    // Function to send feedback using Email.js
+    function sendFeedback() {
+        // Get feedback text from the textarea
+        var feedbackText = document.getElementById('feedbackText').value;
+
+        // Send email using Email.js
+        emailjs.send("service_8vpermo", "template_9s43eov", {
+            feedback: feedbackText,
+            to_email: "gaurisankar.work@gmail.com"
+        })
+        .then(function(response) {
+            console.log("Feedback sent successfully!", response);
+            alert("Feedback sent successfully!");
+        }, function(error) {
+            console.log("Error sending feedback:", error);
+            alert("Error sending feedback. Please try again.");
+        });
+
+        // Hide the feedback modal after sending
+        document.getElementById('feedbackModal').style.display = 'none';
+    }
+
+    // Event listener for the feedback button
+    document.getElementById('feedbackButton').addEventListener('click', showFeedbackModal);
+</script>
+    <!------------------------End-------------------->
     <div class="custom-pointer" id="custom-pointer"></div>
   
   
