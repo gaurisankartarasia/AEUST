@@ -1,59 +1,176 @@
 
 header {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color:#ffffff;
-  background-color: #487171; /* Cartoonish background color */
-  text-align: center;
-  padding: 25px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
+  background-color: #487171; 
+  text-align:left;
+  padding:5px;
 }
-h2 {
-      text-align: center;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* Web-safe font */
-      font-size: 60px; /* Adjust the font size as needed */
-    }
-    h2 {
-      text-align: center;
-      font-family: 'Comic Sans MS', cursive, sans-serif; /* Web-safe font */
-      font-size: 30px; /* Adjust the font size as needed */
-    }
+.header-text1 {
+  position:relative;
+  left:290px;
+  font-size: 45px;
 
-    p, nav, blockquote, li, body, a, h3 {
-      text-align: center;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Web-safe sans-serif font */
-      font-size: 20px;
-    }
-
-    h2 {
-      text-align: center;
-      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; /* Web-safe sans-serif font */
-      font-size: 35px;
-    }
-
-body {
-  background-color: #CCCCCC; /* Cartoonish background color */
+}
+.header-text2 {
+  position:relative;
+  left:285px;
+  top:-30px;
+  font-size: 40px;
+}
+.header-text3 {
+  position:relative;
+  left:285px;
+  top:-60px;
+  font-size: 35px;
+}
+.header-text4 {
+  position:relative;
+  left:285px;
+  top:-80px;
+  font-size: 14px;
+}
+ /****************Feedback Button************/
+ /***body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
   margin: 0;
-  padding:0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}*********/ /*******will be used if necessary*********/
+#feedbackModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 1001; /* Ensure the modal is on top of the backdrop */
+  text-align: center;
 }
+
+#feedbackForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.feedbacklabel {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.feedbacktext {
+  resize: vertical;
+  min-height: 180px;
+  padding: 5px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.feedbackbutton,
+.submitbutton,
+.cancelbutton {
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute;
+  border:none;
+
+}
+
+.feedbackbutton {
+  background-color: #e25b21;
+  color: #fff;
+  left: 92%;
+  top:93%;
+  padding: 8px;
+  position:fixed;
+  
+}
+
+.submitbutton {
+  background-color: #e25b21;
+  color: #fff;
+  right: 10px;
+  bottom:10px;
+  padding: 5px;
+}
+
+.cancelbutton {
+  background-color: #bab6b4;
+  color: #fff;
+  left: 10px;
+  bottom:10px;
+  padding: 5px;
+}
+.cancelbutton:hover,
+.feedbackbutton:hover,
+.submitbutton:hover {
+  background-color: #1c0b04;
+}
+
+/* Add a style to darken the background when the modal is displayed */
+.feedbackmodalbackdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  z-index: 1000; /* Ensure the backdrop is on top */
+}
+
+.feedbackresultpopup {
+  background-color: #333;
+  color: #fff;
+  padding: 16px;
+  border-radius: 4px;
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1002; /* Ensure the popup is on top of the modal */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.feedbackresultpopup.show {
+  opacity: 1;
+}
+
+  
 
 /****************** Main Page Logo********* */
+header {
+  background: url('https://media0.giphy.com/media/BHNfhgU63qrks/giphy.gif ') repeat;
+  background-size: cover; /* Adjust this property based on your needs */
+  color: white; /* Adjust text color for better visibility */
+}
+
 .logo-container {
-  /* Positioning */
-  position: absolute;
-  top: 1.5cm;
-  left: 7cm;
-
-  /* Size */
-  width: 188px;
-  height: auto;
-
+  position: relative; /* Ensure the container is positioned */
 }
 
 .logo-container img {
-  /* Ensure the image takes up 100% of the container */
-  width: 100%;
+  width:300px; /* Adjust the width of the logo as needed */
   height: auto;
- /* Maintain aspect ratio and cover the container */
+  position: absolute; /* Use absolute positioning */
+  left: 1%; /* Move 50% from the left edge of the container */
+  top: 5%; /* Move 50% from the top edge of the container */
+  
 }
+
 
 /*************Contact Us*************/
 body {
@@ -85,6 +202,7 @@ body {
   top: 75px; /* Adjust the top position as needed */
   right: 15px; /* Adjust the right position as needed */
   cursor: pointer;
+  z-index: 9999;
 }
 
 .floating-button2 img {
@@ -183,13 +301,26 @@ body {
 
   /*****Navigation Bar Options********/
   body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
   }
   
   nav {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     background-color: #333;
+  }
+  .blinking-button {
+    white-space: nowrap;
+    animation: marquee 10s linear infinite;
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(250%);
+    }
+    100% {
+      transform: translateX(-25%);
+    }
   }
   
   nav ul {
@@ -203,12 +334,21 @@ body {
     margin: 0;
   }
   
-  nav a {
+  nav a1 {
     display: block;
     padding: 15px;
     text-decoration: none;
     color: white;
     transition: background-color 0.3s ease;
+    margin-right:50px;
+  }
+  nav a2 {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s ease;
+    margin-right:35px;
   }
   
   nav a:hover {
@@ -281,37 +421,36 @@ body {
 /********** Placement CSS Starts **********/  
 
 
-/********** Placement CSS Ends **********/
+/********** About Photos Section **********/
 
-
-
-.container {
+.about-img-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding: 20px;
 }
 
-.photos {
+.about-photos {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.large-photo img {
+.about-large-photo img {
   width: 600px;
   height: auto;
 }
 
-.small-photo img {
-  position: absolute;
-  top: 145%;
-  left: 20%;
-  width: 350px;
+.about-small-photo img {
+  position: relative;
+  top: -4cm; 
+  left: 5cm; 
+  max-width: 45%; 
   height: auto;
 }
 
+/*********About Paragraph Section*********/
 .about {
   flex: 1;
   padding: 20px;
@@ -331,6 +470,7 @@ body {
   margin-bottom: 10px;
 }
 
+/***********Animated Info Section***********/
 .container-fluid-custom {
   display: flex;
   flex-wrap: wrap;
@@ -477,66 +617,8 @@ footer
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for a 3D effect */
 }
 
+/***********Notice Board***********/
 
-.notice-board {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  width: 30%;
-  height: 400px;
-  margin: 50px 0; /* Adjusted top and bottom margin */
-  padding: 50px;
-  border: 1px solid #ccc;
-  border-radius: 40px;
-  background-color: #ebf0f4;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  
-  position: absolute;
-  top: 195%; /* Adjusted to center vertically */
-  right: 5%; /* Adjusted to move to the right side */
-  transform: translateY(-50%); /* Adjusted to center vertically */
-}
-
-.notice-board h1 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 20px;
-  color: #d61b1b;
-  font-weight: bold;
-}
-
-.notice-board ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.notice-board li {
-  margin-bottom: 15px; /* Added spacing between messages */
-}
-
-.notice-board li h2 {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.notice-board li p {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-size: 16px;
-}
-
-.notice-board a {
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: rgb(0, 42, 255);
-  text-decoration: none;
-  font-weight: bold;
-  display: block; /* Ensure each link is a block-level element */
-}
-
-.notice-board li {
-  padding-top: 5px;
-}
 .know-more {
   padding: 7px 15px; 
   font-size: 16px;
