@@ -4,163 +4,206 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Login to GEC</title>
+  <title>Login to AECST</title>
 
-  <style>/* style.css */
+  <style>
 
-    body {
-      font-family: 'Arial', sans-serif;
-      text-align: center;
-      margin: 0;
-      padding: 0;
-     
-    }
+body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            height: 100vh;
+            overflow: hidden;
+        }
+
     
-    /* Full-screen blurred background */
-    body::before {
-      content: "";
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: url('https://wallpaperaccess.com/full/729419.png') center/cover no-repeat fixed; /* Replace 'your-background-image.jpg' with your image path */
-      filter: blur(10px); /* Adjust the blur amount as needed */
-      z-index: -1; /* Send the background behind other elements */
-    }
     
-    .overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0, 0, 0, 0.5); /* Adjust the color and transparency as needed */
-      z-index: -1; /* Send the overlay behind other elements */
-    }
-    
-    /* Add your login page styles here */
-    #loginForm {
-      width: 300px;
-      margin: 100px auto;
-      padding: 20px;
-      border: 1px solid #ccc;
-      background-color: rgba(255, 255, 255, 0.8); /* Use rgba for a semi-transparent white background */
-      border-radius: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 1; /* Ensure the form is above the video */
-      position: relative;
-    }
-    
-    h3 {
-      color: #333;
-    }
-    
-    label {
-      display: block;
-      text-align: left;
-      margin-bottom: 5px;
-      font-weight: bold;
-      color: #555;
-    }
-    
-    select, input {
-      width: calc(100% - 22px);
-      padding: 10px;
-      margin: 5px 0 15px;
-      box-sizing: border-box;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 16px;
-    }
-    
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #4caf50;
-      color: #fff;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
-      transition: background-color 0.3s ease;
-    }
-    
-    button:hover {
-      background-color: #237527;
-    }
-    .logo-img {
-      width: 100px; /* Set the desired width */
-      height: auto; /* Maintain aspect ratio */
-      margin: 20px; /* Adjust margin as needed for positioning */
-    }
-    
-    .logo-img img {
-      display: block; /* Remove default image spacing */
-      max-width: 30%; /* Make sure the image doesn't exceed its container */
-      height: auto; /* Maintain aspect ratio */
-      margin:0;
-      left:120px;
-      top: -3cm;
-      position:absolute;
-    }</style>
+   
+        #left-side {
+            flex: 1;
+            position: relative;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('your-image.jpg') center/cover no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url('https://rare-gallery.com/thumbs/1108750-illustration-digital-art-monochrome-simple-background-planet-space-minimalism-portrait-display-stars-Moon-helmet-flag-astronaut-circle-spacesuit-universe-outer-space-as.jpg') center/cover no-repeat;
+        }
+
+        #left-side h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        #right-side {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .form-container {
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .form-container h2 {
+            color: #007BFF;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .toggle-btn {
+            cursor: pointer;
+            color: #007BFF;
+            margin-top: 10px;
+        }
+        .checkbox-container {
+    display: flex;
+    white-space: nowrap;
+}
+
+.checkbox-container input {
+align-items: left;
+margin-left: 1px;
+margin-top: 6px;
+}
+.checkbox-container label{
+   margin-right: 200px;
+} </style>
  
   
 </head>
 <body>
 
-  <!-- Video Background -->
-  <br>
-  <br>
-  
+  <div id="left-side">
+    <h1>AECST</h1>
+    <p>Welcome to AECST</p>
+</div>
 
-  <!-- Login Form -->
-  <div id="loginForm">
-    <div class="logo-img">
-      <img src="https://i.postimg.cc/0yVDGJG5/66085a14-77d5-45e2-9444-630345d0f5b1.png" alt="Logo">
-  </div>
-    <h3>AECST</h3>
-  
+<div id="right-side">
+    <div class="form-container" id="login-form">
+        <h2>Login</h2>
+        <form action="#" method="post">
+            <!-- Login form fields go here -->
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-    <label for="userType">Select User:</label>
-    <select id="userType" name="userType">
-      <option value="student">Student</option>
-      <option value="faculty">Faculty</option>
-      <option value="office">Office</option>
-    </select>
+            <div class="checkbox-container">
+                <input type="checkbox" id="rememberMe">
+                <label for="rememberMe">Remember me</label>
+            </div>
+            <div>
+                <button type="submit">Login</button>
+            </div>
+            <p class="toggle-btn" onclick="toggleForm()">Don't have an account? Signup here.</p>
+        </form>
+    </div>
 
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username" required>
-
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password" required>
-
-    <button onclick="login()">Login</button>
-  </div>
+    <div class="form-container" id="signup-form" style="display: none;">
+        <h2>Signup</h2>
+        <form action="#" method="post">
+            <!-- Signup form fields go here -->
+            <label for="newUsername">Username:</label>
+            <input type="text" id="newUsername" name="newUsername" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="newPassword">Password:</label>
+            <input type="password" id="newPassword" name="newPassword" required>
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <!-- Captcha goes here -->
+            <div>
+                <button type="submit">Signup</button>
+            </div>
+            <p class="toggle-btn" onclick="toggleForm()">Already have an account? Login here.</p>
+        </form>
+    </div>
+</div>
 
   <script>
-    function login() {
-      var userType = document.getElementById("userType").value;
-      var username = document.getElementById("username").value;
-      var password = document.getElementById("password").value;
+   function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
 
-      // Perform authentication here (e.g., check username and password)
-
-      // For simplicity, redirect to different pages based on the role
-      if (userType === "student") {
-        // Redirect to student page with login success parameter
-        window.location.href = "index.html?loginSuccess=true";
-      } else if (userType === "faculty") {
-        // Redirect to faculty page with login success parameter
-        window.location.href = "index.html?loginSuccess=true";
-      } else if (userType === "office") {
-        // Redirect to office page with login success parameter
-        window.location.href = "index.html?loginSuccess=true";
-      } else {
-        alert("Invalid user type");
-      }
-    }
+            if (loginForm.style.display === 'none') {
+                loginForm.style.display = 'block';
+                signupForm.style.display = 'none';
+            } else {
+                loginForm.style.display = 'none';
+                signupForm.style.display = 'block';
+            }
+        }
   </script>
+
+<script>
+  function toggleForm() {
+      const loginForm = document.getElementById('login-form');
+      const signupForm = document.getElementById('signup-form');
+
+      if (loginForm.style.display === 'none') {
+          loginForm.style.display = 'block';
+          signupForm.style.display = 'none';
+      } else {
+          loginForm.style.display = 'none';
+          signupForm.style.display = 'block';
+      }
+  }
+
+  document.getElementById('login-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Replace 'login-processing.html' with the actual URL to process the login on the server
+      window.location.href = 'index.html';
+  });
+
+  document.getElementById('signup-form').addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent the default form submission behavior
+
+      // Replace 'signup-processing.html' with the actual URL to process the signup on the server
+      window.location.href = 'index.html';
+  });
+</script>
+
 
 </body>
 </html>
