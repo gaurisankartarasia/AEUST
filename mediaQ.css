@@ -43,9 +43,64 @@
     left: 1%;
     top: 5%;
   }
-  
+
+  nav { 
+    white-space: nowrap;
+    background-color: #1285a8;
+    z-index: 1;
+    padding-right: 1285px;
+   }
+   nav a{
+    margin-right: 3px;
+   } 
+   .loginbtn{
+    position: absolute;
+    right: -211%;
+   }
+   .admission-img-btns{
+    margin-left:640px;
+   }
+   .admission-img-btn{
+   padding-left: 140px;
+   padding-right: 140px;
+   padding-top: 50px;
+   padding-bottom: 10px;
+   }
+   .impactfulimg{
+    position: relative;
+    width:90px;
+    height:auto;
+    top: 20px;
+   }
+   .impactfulh3{
+    bottom:-35px;
+   }
+   /*********Space container**********/
+   .space-container{
+    width:310%;
+   }
+   .space-container h2{
+font-size: 100px;
+   }
+   .space-container h2 span{
+    font-size: 38px;
+    font-weight:500;
+    letter-spacing:10px;
+    line-height: 150px;
+    left:25%;
+    position: relative;
+  }
+
+  /*********About Section**********/
+  .about-large-photo img {
+    width: 1000px;
+    height: auto;
+  }
     /* Additional styles for smaller screens */
   }
+
+
+
   
   /* Media query for screens between 601 and 900 pixels */
   
@@ -66,5 +121,7 @@
   
     /* Additional styles for screens larger than 900px */
   }
-  
+
+
+
   
