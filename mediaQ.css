@@ -1,0 +1,70 @@
+/* Media query for screens smaller than 600 pixels */
+@media only screen and (max-width: 600px) {
+    header {
+      
+      text-align: left;
+      padding-right:1280px;
+      background-image: url(https://wallpapercave.com/wp/wp4865484.jpg);
+      background-size: cover;
+      
+    }
+  .header-text1{
+    text-align: right;
+    padding-right: 800px;
+    font-size: 54px;
+    white-space: nowrap;
+    
+  }
+  .header-text2{
+    text-align: right;
+    padding-right: 800px;
+    font-size: 44px;
+    white-space: nowrap;
+    
+  }
+  .header-text3{
+    text-align: right;
+    padding-right: 800px;
+    font-size: 34px;
+    white-space: nowrap;
+    
+  }
+  .header-text4{
+    text-align: right;
+    padding-right: 800px;
+    font-size: 14px;
+    white-space: nowrap;
+    
+  }
+  .logo-container img {
+    width: 250px;
+    height: auto;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+  }
+  
+    /* Additional styles for smaller screens */
+  }
+  
+  /* Media query for screens between 601 and 900 pixels */
+  
+  @media only screen and (min-width: 601px) and (max-width: 900px) {
+    body {
+      font-size: 16px;
+    }
+  
+    /* Additional styles for screens between 601px and 900px */
+  }
+  
+  /* Media query for screens larger than 900 pixels */
+  
+  @media only screen and (min-width: 901px) {
+    body {
+      font-size: 18px;
+    }
+  
+    /* Additional styles for screens larger than 900px */
+  }
+  
+  
