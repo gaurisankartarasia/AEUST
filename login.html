@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Login to AECST</title>
-
-  <style>
-
-body {
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login to AECST</title>
+    <style>
+        body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
             padding: 0;
             display: flex;
-            height: 100vh;
+            flex-direction: column;
+            min-height: 100vh;
             overflow: hidden;
         }
 
-    
-    
-   
         #left-side {
             flex: 1;
             position: relative;
@@ -47,12 +43,14 @@ body {
         }
 
         .form-container {
-            width: 300px;
+            width: 80%;
+            max-width: 400px;
             padding: 20px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             background-color: #fff;
+            margin: 20px; /* Added margin for better spacing */
         }
 
         .form-container h2 {
@@ -95,73 +93,70 @@ body {
             color: #007BFF;
             margin-top: 10px;
         }
-        .checkbox-container {
-    display: flex;
-    white-space: nowrap;
-}
 
-.checkbox-container input {
-align-items: left;
-margin-left: 1px;
-margin-top: 6px;
-}
-.checkbox-container label{
-   margin-right: 200px;
-} </style>
- 
-  
+        .checkbox-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px; /* Added margin for better spacing */
+        }
+
+        .checkbox-container input {
+            margin-right: 5px; /* Adjusted margin for better spacing */
+        }
+    </style>
 </head>
+
 <body>
 
-  <div id="left-side">
-    <h1>AECST</h1>
-    <p>Welcome to AECST</p>
-</div>
-
-<div id="right-side">
-    <div class="form-container" id="login-form">
-        <h2>Login</h2>
-        <form action="#" method="post">
-            <!-- Login form fields go here -->
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
-
-            <div class="checkbox-container">
-                <input type="checkbox" id="rememberMe">
-                <label for="rememberMe">Remember me</label>
-            </div>
-            <div>
-                <button type="submit">Login</button>
-            </div>
-            <p class="toggle-btn" onclick="toggleForm()">Don't have an account? Signup here.</p>
-        </form>
+    <div id="left-side">
+        <h1>AECST</h1>
+        <p>Welcome to AECST</p>
     </div>
 
-    <div class="form-container" id="signup-form" style="display: none;">
-        <h2>Signup</h2>
-        <form action="#" method="post">
-            <!-- Signup form fields go here -->
-            <label for="newUsername">Username:</label>
-            <input type="text" id="newUsername" name="newUsername" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="newPassword">Password:</label>
-            <input type="password" id="newPassword" name="newPassword" required>
-            <label for="confirmPassword">Confirm Password:</label>
-            <input type="password" id="confirmPassword" name="confirmPassword" required>
-            <!-- Captcha goes here -->
-            <div>
-                <button type="submit">Signup</button>
-            </div>
-            <p class="toggle-btn" onclick="toggleForm()">Already have an account? Login here.</p>
-        </form>
-    </div>
-</div>
+    <div id="right-side">
+        <div class="form-container" id="login-form">
+            <h2>Login</h2>
+            <form action="#" method="post">
+                <!-- Login form fields go here -->
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
 
-  <script>
-   function toggleForm() {
+                <div class="checkbox-container">
+                    <input type="checkbox" id="rememberMe">
+                    <label for="rememberMe">Remember me</label>
+                </div>
+                <div>
+                    <button type="submit">Login</button>
+                </div>
+                <p class="toggle-btn" onclick="toggleForm()">Don't have an account? Signup here.</p>
+            </form>
+        </div>
+
+        <div class="form-container" id="signup-form" style="display: none;">
+            <h2>Signup</h2>
+            <form action="#" method="post">
+                <!-- Signup form fields go here -->
+                <label for="newUsername">Username:</label>
+                <input type="text" id="newUsername" name="newUsername" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="newPassword">Password:</label>
+                <input type="password" id="newPassword" name="newPassword" required>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <!-- Captcha goes here -->
+                <div>
+                    <button type="submit">Signup</button>
+                </div>
+                <p class="toggle-btn" onclick="toggleForm()">Already have an account? Login here.</p>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
             const loginForm = document.getElementById('login-form');
             const signupForm = document.getElementById('signup-form');
 
@@ -173,39 +168,24 @@ margin-top: 6px;
                 signupForm.style.display = 'block';
             }
         }
-  </script>
+    </script>
 
-<script>
-  function toggleForm() {
-      const loginForm = document.getElementById('login-form');
-      const signupForm = document.getElementById('signup-form');
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
 
-      if (loginForm.style.display === 'none') {
-          loginForm.style.display = 'block';
-          signupForm.style.display = 'none';
-      } else {
-          loginForm.style.display = 'none';
-          signupForm.style.display = 'block';
-      }
-  }
+            // Replace 'login-processing.html' with the actual URL to process the login on the server
+            window.location.href = 'index.html';
+        });
 
-  document.getElementById('login-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the default form submission behavior
+        document.getElementById('signup-form').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission behavior
 
-      // Replace 'login-processing.html' with the actual URL to process the login on the server
-      window.location.href = 'index.html';
-  });
-
-  document.getElementById('signup-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Prevent the default form submission behavior
-
-      // Replace 'signup-processing.html' with the actual URL to process the signup on the server
-      window.location.href = 'index.html';
-  });
-</script>
-
+            // Replace 'signup-processing.html' with the actual URL to process the signup on the server
+            window.location.href = 'index.html';
+        });
+    </script>
 
 </body>
+
 </html>
-
-
