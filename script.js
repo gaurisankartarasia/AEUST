@@ -166,7 +166,7 @@ function sendMessage() {
       return response.data.choices[0].message.content;
     } catch (error) {
       console.error('Error fetching ChatGPT response:', error);
-      return 'I encountered an error. Please try again.';
+      return 'Waiting for the server to turn on.';
     }
   }
 
