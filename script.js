@@ -158,7 +158,7 @@ function sendMessage() {
         {
           headers: {
             'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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',
+            'Authorization': 'Bearer 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',
           },
         }
       );
